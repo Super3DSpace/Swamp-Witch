@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Wall
   - PlayerBullet
+  - Enemy
+  - Barricade
+  - Despawner
+  - BulletDestroyer
   layers:
   - Default
   - TransparentFX
@@ -17,9 +21,9 @@ TagManager:
   - 
   - PlayerBullet
   - Wall
-  - 
-  - 
-  - 
+  - Enemy
+  - Despawner
+  - BulletDestroyer
   - 
   - 
   - 

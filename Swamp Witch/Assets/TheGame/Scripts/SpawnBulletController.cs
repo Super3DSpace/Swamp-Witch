@@ -9,15 +9,18 @@ public class SpawnBulletController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("shootBullet", interval, interval);
+        //InvokeRepeating("shootBullet", interval, interval);
     }
     void shootBullet()
     {
-        GameObject g = (GameObject)Instantiate(bullet, transform.position, Quaternion.identity);
+        if (Input.GetButtonDown("Fire1") == true)
+        {
+            GameObject g = (GameObject)Instantiate(bullet, transform.position, Quaternion.identity);
+        }
     }
     // Update is called once per frame
     void Update()
     {
-        
+        shootBullet();
     }
 }
