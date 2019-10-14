@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public float HP = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +21,21 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Barricade")
         {
-            Destroy(this.gameObject);
+            HP--;
+            if (HP <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+
         }
         if (collision.gameObject.tag == "PlayerBullet")
         {
-            //hier kann später Enemy HP-- oder etwas in der Art eingebaut werden
-            Destroy(this.gameObject);
-
+            
+            HP--;
+            if (HP <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
